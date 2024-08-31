@@ -1,5 +1,5 @@
-export default function Button(){
+export default function Button({...props}){
   return (
-    <a href="#">Button</a>
+    <a {...props} href="#">Button</a>
   )
 }
