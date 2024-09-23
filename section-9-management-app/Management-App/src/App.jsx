@@ -4,10 +4,10 @@ import Sidebar from "./components/Sidebar"
 
 function App() {
   return(
-    <>
+    <div className="box-border">
       <Sidebar />
       <Content />
-    </>
+    </div>
   )
 }
 
