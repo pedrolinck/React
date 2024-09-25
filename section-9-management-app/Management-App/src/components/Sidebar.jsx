@@ -1,8 +1,11 @@
-export default function Sidebar(){
+/* eslint-disable react/prop-types */
+import Button from "./Button.jsx"
+
+export default function Sidebar({children}){
   return (
-    <section className="pl-6 pr-16 pt-8 bg-black absolute top-8 h-5/6">
-      <h2 className="uppercase font-bold">your projects</h2>
-      <button className="mt-8 bg-zinc-900 px-6 py-2">+ Add Project</button>
+    <section className="pl-16 pr-16 py-8 mt-8 rounded-r-xl bg-black">
+      <h2 className="uppercase font-bold md:text-xl text-slate-200">your projects</h2>
+      <Button>{children}</Button>
     </section>
   )
 }

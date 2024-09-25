@@ -1,12 +1,12 @@
 // import { useState } from 'react'
-import Content from "./components/Content"
+import InitialView from "./components/InitialView"
 import Sidebar from "./components/Sidebar"
 
 function App() {
   return(
-    <div className="box-border">
+    <div className="flex h-screen gap-8">
       <Sidebar />
-      <Content />
+      <InitialView />
     </div>
   )
 }
