@@ -4,7 +4,7 @@ import { useRef } from "react"
 import Input from "./Input"
 import Modal from "./Modal";
 
-export default function NewProject({onAdd}){
+export default function NewProject({onAdd, onCancel}){
 
   const modal = useRef();
 
@@ -34,14 +34,18 @@ export default function NewProject({onAdd}){
   return (
     <>
       <Modal ref={modal} buttonCaption="Okay"> 
-        <h2>Invalid Input</h2>
+        <h2  className="text-xl font-bold  my-4">Invalid Input</h2>
         <p>Oops ... looks like you forget to enter a value.</p>
         <p>Please make shure you provide a valid value for every input field</p>
       </Modal>
       <div className="w-[35rem] mt-16">
         <menu className="flex intems-center justify-end gap-4 my-4">
-          <li><button className="text-stone-800 hover:text-slate-950">Cancel</button></li>
-          <li><button onClick={handleSave} className="">Save</button></li>
+          <li>
+            <button onClick={onCancel} className="text-stone-800 hover:text-slate-950">Cancel</button>
+          </li>
+          <li>
+            <button onClick={handleSave} className="">Save</button>
+          </li>
         </menu>
         <div className="flex flex-col gap-4">
           <Input type="text" ref={title} label="Title"/>
